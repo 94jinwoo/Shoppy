@@ -4,6 +4,7 @@ import { FcShop } from 'react-icons/fc';
 import { login, logout, onUserStateChange } from '../api/firebase';
 import { useState, useEffect } from 'react';
 import User from './User';
+import Button from './ui/Button';
 
 export default function Header() {
   const [user, setUser] = useState();
@@ -26,8 +27,8 @@ export default function Header() {
         <Link to='/carts'>Cart</Link>
         <Link to='/products/new'>New</Link>
         {user && <User user={user} />}
-        {!user && <button onClick={login}>Login</button>}
-        {user && <button onClick={logout}>Logut</button>}
+        {!user && <Button text={'Login'} onClick={login} />}
+        {user && <Button text={'Logout'} onClick={logout} />}
       </nav>
     </header>
   );
