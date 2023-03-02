@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         brand: '#2A61D6',
       },
+      backgroundImage: {
+        banner: `url('../public/images/banner.jpg')`,
+      },
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],
